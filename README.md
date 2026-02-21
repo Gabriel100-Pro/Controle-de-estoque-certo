@@ -13,7 +13,7 @@
 ## 🖥️ Preview do Projeto
 
 <p align="center">
-  <img src="./" width="100%" />
+  <img src="./assets/Captura%20de%20tela%202026-02-21%20123318.png" width="100%" />
 </p>
 
 ---
