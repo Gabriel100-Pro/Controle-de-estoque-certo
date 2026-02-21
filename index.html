@@ -1,67 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section>
-        <aside>
-            <h1>📦Estoque</h1>
-            <div class="aside-button">
-                <button>Dashboard</button>
-                <button>Produtos</button>
-                <button>Relatórios</button>
-                <button>Alertas</button>
-                <button>Dashboard</button>
-                <button>Produtos</button>
-                <button>Relatórios</button>
-                <button>Alertas</button>
-            </div><!--aside-button-->
-        </aside>
-    </section>
-        <main class="main-cards">
-            <section class="tab-content">
-                <div class="header">
-                    <h2>Dashboard</h2>
-                    <div class="header-cards">
-                        <div class="cards">
-                            <p>TOTAL DE PRODUTOS</p>
-                            <span class="valor-number">120</span>
-                        </div><!--cards-->
-                        <div class="cards">
-                            <p>VALOR TOTAL EM ESTOQUE</p>
-                            <span class="valor-number">R$ 0,00</span>
-                        </div><!--cards-->
-                        <div class="cards">
-                            <p>PRODUTOS EM ALERTA</p>
-                            <span class="valor-number-red">0</span>
-                        </div><!--cards-->
-                        <div class="cards">
-                            <p>MOVIMENTAÇÃO HOJE</p>
-                            <span class="valor-number">0</span>
-                        </div><!--cards-->
-                    </div><!--header-cards-->
-                </div><!--header-->
-    
-                </section>
-                <section class="section-grafic">
-                    <main class="main-grafic">
-                        <div class="distribuision">
-                            <p class="text-container">Distribuição de Estoque</p>
-                        </div><!--distribuision-->
-                        <div class="valor-categoria">
-                            <p class="text-container">Valor por Categoria</p>
-                        </div><!--valor-categoria-->
-                    </main><!--main-grafic-->
-                     <div class="historico-movimentacao">
-                            <p class="text-container">Histórico de Movimentação (Últimos 7 dias)</p>
-                        </div><!--historico-movimentacao-->
-                </section><!--section-grafic-->
-                </main><!--main-cards-->
-        </body>
+    <aside id="sidebar">
+    <h1>📦 Estoque</h1>
+    <div class="aside-button">
+        <button>Dashboard</button>
+        <button>Produtos</button>
+        <button>Relatórios</button>
+        <button>Alertas</button>
+    </div>
+</aside>
+
+<div id="overlay"></div>
+
+<header class="mobile-header">
+    <div class="header-left">
+        📦 <span>Estoque</span>
+    </div>
+    <div class="menu-icon" id="menuToggle">☰</div>
+</header>
+    <main class="main-cards">
+        <div class="header">
+            <h2>Dashboard</h2>
+
+            <div class="header-cards">
+                <div class="cards">
+                    <p>TOTAL DE PRODUTOS</p>
+                    <span>120</span>
+                </div>
+
+                <div class="cards">
+                    <p>VALOR TOTAL EM ESTOQUE</p>
+                    <span>R$ 53.000</span>
+                </div>
+
+                <div class="cards">
+                    <p>PRODUTOS EM ALERTA</p>
+                    <span class="danger">5</span>
+                </div>
+
+                <div class="cards">
+                    <p>MOVIMENTAÇÃO HOJE</p>
+                    <span>12</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-grafic">
+
+            <div class="main-grafic">
+
+                <!-- Distribuição -->
+                <div class="card grafico-card">
+                    <p class="text-container">Distribuição de Estoque</p>
+
+                    <div class="distribuicao-content">
+                        <div class="legenda">
+                            <ul>
+                                <li><span class="cor eletronicos"></span> Caixa Papelão</li>
+                                <li><span class="cor roupas"></span> Acrilico</li>
+                                <li><span class="cor acessorios"></span> Suporte</li>
+                                <li><span class="cor outros"></span> Outros</li>
+                            </ul>
+                        </div>
+
+                        <div class="grafico">
+                            <canvas id="graficoDistribuicao"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valor por Categoria -->
+                <div class="card grafico-card">
+                    <p class="text-container">Valor por Categoria</p>
+                    <canvas id="graficoValorCategoria"></canvas>
+                </div>
+
+            </div>
+
+            <!-- Histórico -->
+            <div class="card historico">
+                <p class="text-container">Histórico de Movimentação (Últimos 7 dias)</p>
+                <canvas id="graficoHistorico"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <nav class="mobile-nav">
+        <div class="nav-item active">🏠<span>Dashboard</span></div>
+        <div class="nav-item">📦<span>Produtos</span></div>
+        <div class="nav-item">📄<span>Relatórios</span></div>
+        <div class="nav-item">⚠️<span>Alertas</span></div>
+    </nav>
+</body>
+
 </html>
