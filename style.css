@@ -19,6 +19,7 @@ body {
     background: var(--bg);
     font-family: 'Segoe UI', sans-serif;
     
+    
 }
 
 .mobile-header {
@@ -61,7 +62,7 @@ aside h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
 }
-
+ 
 .aside-button button:hover {
     transform: translateX(5px);
 }
@@ -189,6 +190,78 @@ canvas {
     display: none;
 }
 
+-------------------------------- PÁGINA DE CADASTRO -- ------------------------------
+
+
+.cadastro-card p{
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.cadastro-page .text-card {
+    margin-bottom: 10px;
+}
+
+.cadastro-page input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+.cadastro-page select{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    ;
+}
+
+.cadastro-page .Information {
+    width: 100%;
+    
+}
+
+.cadastro-page .Information-container {
+    display: flex;
+    gap: 80px;
+}
+
+
+.cadastro-page .Information-sons{
+   
+     width: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.cadastro-page .Information-financial {
+    width: auto;
+    
+    
+}
+    
+
+   
+
+.cadastro-page .cadastro-card {
+    
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+    margin-top: 30px;
+    height: auto;
+}
+
+
+
 @media (max-width: 768px) {
 
     body {
@@ -227,9 +300,6 @@ canvas {
     
 }
 
-    aside {
-        display: none;
-    }
 
     .mobile-header {
         display: flex;
@@ -322,4 +392,10 @@ canvas {
     .section-grafic {
         padding-bottom: 80px;
     }
+
+    .cadastro-page .Information-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 }

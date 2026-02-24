@@ -12,13 +12,13 @@
     <aside id="sidebar">
     <h1>📦 Estoque</h1>
     <div class="aside-button">
-        <button>Dashboard</button>
+        <button onclick="loadPage('dashboard')">Dashboard</button>
         <button>Produtos</button>
         <button>Relatórios</button>
         <button>Alertas</button>
-        <button>Cadastro de Produtos</button>
+        <button onclick="loadPage('cadastro')">Cadastro de Produtos</button>
         <button>Excluir Produtos</button>
-        <button>Quantidade de Produtos</button>
+        <button >Quantidade de Produtos</button>
     </div>
 </aside>
 
@@ -30,74 +30,8 @@
     </div>
     <div class="menu-icon" id="menuToggle">☰</div>
 </header>
-    <main class="main-cards">
-        <div class="header">
-            <h2>Dashboard</h2>
-
-            <div class="header-cards">
-                <div class="cards">
-                    <p>TOTAL DE PRODUTOS</p>
-                    <span>120</span>
-                </div>
-
-                <div class="cards">
-                    <p>VALOR TOTAL EM ESTOQUE</p>
-                    <span>R$ 53.000</span>
-                </div>
-
-                <div class="cards">
-                    <p>PRODUTOS EM ALERTA</p>
-                    <span class="danger">5</span>
-                </div>
-
-                <div class="cards">
-                    <p>MOVIMENTAÇÃO HOJE</p>
-                    <span>12</span>
-                </div>
-            </div>
-        </div>
-
-        <section class="section-grafic">
-
-            <div class="main-grafic">
-
-                <!-- Distribuição -->
-                <div class="card grafico-card">
-                    <p class="text-container">Distribuição de Estoque</p>
-
-                    <div class="distribuicao-content">
-                        <div class="legenda">
-                            <ul>
-                                <li><span class="cor eletronicos"></span> Caixa Papelão</li>
-                                <li><span class="cor roupas"></span> Acrilico</li>
-                                <li><span class="cor acessorios"></span> Suporte</li>
-                                <li><span class="cor outros"></span> Outros</li>
-                            </ul>
-                        </div>
-
-                        <div class="grafico">
-                            <canvas id="graficoDistribuicao"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Valor por Categoria -->
-                <div class="card grafico-card">
-                    <p class="text-container">Valor por Categoria</p>
-                    <canvas id="graficoValorCategoria"></canvas>
-                </div>
-
-            </div>
-
-            <!-- Histórico -->
-            <div class="card historico">
-                <p class="text-container">Histórico de Movimentação (Últimos 7 dias)</p>
-                <canvas id="graficoHistorico"></canvas>
-            </div>
-
-        </section>
-
-    </main>
+    <main id="content" class="main-cards">
+</main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
