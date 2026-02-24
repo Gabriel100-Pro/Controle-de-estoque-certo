@@ -13,7 +13,7 @@ overlay.addEventListener("click", () => {
 });
 
 
-function loadPage(page) {
+function loadPage(page,  element) {
     const content = document.getElementById("content");
 
     // ✅ remove classes antigas sempre que trocar página
@@ -134,7 +134,11 @@ function loadPage(page) {
             </div><!-- cadastro-card -->
         `;
     }
-}
+
+    
+
+    // Remove active de todos
+   
 
 function initCharts() {
 
@@ -192,7 +196,8 @@ function initCharts() {
             maintainAspectRatio: false
         }
     });
-
+}
    
 }
+
 loadPage("dashboard");

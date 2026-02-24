@@ -300,7 +300,6 @@ canvas {
     
 }
 
-
     .mobile-header {
         display: flex;
         justify-content: space-between;
@@ -370,6 +369,11 @@ canvas {
         border-top: 1px solid #e2e8f0;
     }
 
+    .mobile-nav img{
+        width: 22px;
+        height: 22px;
+    }
+
     .nav-item {
         display: flex;
         flex-direction: column;
@@ -380,12 +384,15 @@ canvas {
     }
 
     .nav-item.active {
-        color: #2563eb;
+        
         font-weight: 600;
     }
 
     .nav-item span {
         margin-top: 3px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        
     }
 
     /* Espaço para não ficar atrás do menu */
