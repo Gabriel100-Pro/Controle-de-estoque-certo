@@ -240,6 +240,18 @@ canvas {
     gap: 20px;
 }
 
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
 .cadastro-page .Information-financial {
     width: auto;
     
